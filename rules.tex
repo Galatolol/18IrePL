@@ -1,0 +1,154 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[parfill]{parskip}
+%\usepackage{adforn}
+
+
+\title{18IrePL\\ \large{Rules differences with 18Ireland}}
+\author{Galatolol}
+\date{\today}
+
+
+\newcommand{\Example}{\textbf{Example:}}
+\newcommand{\Line}{\noindent\rule{7.8cm}{0.4pt}}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This is my take on \href{https://boardgamegeek.com/boardgame/196217/18ireland}{Ian Scrivins' 18Ireland}. I wanted to make it more focused on mergers and to cut some chrome that felt to me unnecessary.
+
+The game is set in modern-day Poland. Historically it is completely inaccurate. All companies are imaginary (major companies are named after real railroad connections and companies).
+
+This document covers the rules differences between the two games.
+
+
+%\adforn{21}\quad\adforn{11}\quad\adforn{49}
+
+\section{Definitions}
+\begin{description}
+	\item [Minor company] 5-share company. There is 16 of them.
+	\item [Major company] 10-share company. There is 7 of them.
+\end{description}
+
+\section{Setup}
+
+\begin{center}
+  \begin{tabular}{ | c | c | c | }
+    \hline
+    \textbf{Players} & \textbf{Starting capital} & \textbf{Cert. limit} \\ \hline
+    3 & 180 & 16 \\ \hline
+    4 & 270 & 12 \\ \hline
+    5 & 216 & 10 \\ \hline
+    6 & 180 & 8 \\ 
+    \hline
+      \multicolumn{3}{|l|}{\textbf{Bank size:} 4000} \\
+ 	\hline
+
+  \end{tabular}
+\end{center}
+
+
+\subsection{Offboard connections}
+Randomly choose two offboard connections and place them in corresponding hexes. The rest won't be used in the game.
+
+Minor A and Minor B start on those offboard hexes. To determine which is which, start in Germany and go counter-clockwise: the first connection you meet is where Minor A starts.
+
+\textit{\Example~Germany—A, Slovakia—B; Ukraine—A, Russia B.}
+
+\subsection{Minor companies}
+Set aside the company charter of the Minor 8. Shuffle the remaining minor company charters face down. Randomly remove from the game two of them. The remaining charters are placed face up in a pile. Their order can be consulted by the players. 
+
+\subsection{Private companies}
+Prepare a waterfall auction: lay all private companies in order of their costs.
+
+\subsection{+10 tokens}
+Put a +10 marker on marked hexes. Cities located in those hexes have their value increased by 10.
+
+\textbf{Concerned hexes: D10, D12, F4, G13, G15, H18}
+
+
+\section{Stock round}
+
+\subsection{Starting minor companies}
+In yellow phase only yellow par values are available. In green phase green par values are also avaiable. In brown phase brown par values are also available.
+
+\textit{\Example~Bid of 280. In yellow phase the par value would be 100, whilst in green and brown phase it would be 122.}
+
+\subsection{Starting major companies}
+Major companies may only be formed as a result of a merger. They cannot be open directly in a stock round.
+
+
+\section{Operating round}
+
+\subsection{Track laying}
+Companies may lay or upgrade only one tile per Operating Round. Minor 6 and Minor 10 are exception to this rule: they may lay up to two yellow tiles on their first Operating Round (however they cannot combine tile upgrade and additional track lay).
+
+
+\subsection{Trains}
+Trains are ``classic" N-trains. They can reach up to N stops. A stop constitues of city, town, offboard connection, or port.
+
+4D-train reaches up to 4 stops and doubles their value.
+
+Trains are one-sided. Once they rust, they are immediately removed from the game.
+
+
+\section{Game end}
+
+In most cases the last Merger Round is replaced with a third Operating Round.
+
+In case of more than one end game conditions being active, the one that ends the game faster is in effect.
+
+\subsection{A company reaches 260 value}
+Finish the current Operating Round.
+
+\subsection{Bank runs out of money}
+Finish the current set of Stock Round + Operating Rounds \textbf{plus one additional Operating Round}.
+
+\subsection{First 4D-train purchased}
+Finish the current set of Operating Rounds, then play Stock Round and \textbf{three Operating Rounds}.
+
+\subsection{Bankruptcy}
+If a player goes bankrupt, they are removed from the game. All their companies close. Minority shareholders receive the final value (if any) of their shares from the bank.
+
+Play continues until the end of the current set of Operating Rounds \textbf{plus one additional Operating Round}. 
+
+More than one player may go bankrupt. At any time, if only one player is left in the game, they win immediately.
+
+
+\section{Private companies}
+
+\subsection{Wrocław-Oława Railroad}
+
+No special power.
+
+\subsection{Industrialisation of Łódź}
+
+Owning company may place a +20 token in Łódź (G13). For all companies the value of the city is increased by 20. The marker isn't removed when \textit{Industrialisation of Łódź} closes or the hex is upgraded.
+
+\subsection{Local Railroad}
+
+Owning company may upgrade a town using the IPL1 tile. No other company has access to this tile. This upgrade action is in addition to normal tile placement (lay or upgrade). It is possible to lay a tile and immediately upgrade it using this power. 
+
+The power is still available after \textit{Local Railorad} closes.
+
+\textit{\textbf{Note:} There is only one IPL1 tile, so the power can be executed only once.}
+
+\subsection{Bridge Company}
+
+Owning company ignores all terrain costs (water and mountain).
+
+\subsection{Baltic Shipping}
+
+Owning company may place a \$40 token in one of the ports (B4, E1, G3). This forms a stop that only trains of the owning company may access. The token isn't removed when \textit{Baltic Shipping} closes.
+
+\subsection{Warsaw-Radom Railroad}
+
+Owning player immediately takes the presidency of Minor 8, places its home station (I11), and puts the winning bid into its treasury. Par price is the highest yellow par value that is not more than half the bid. Then Minor 8 buys a train. \textit{Warsaw-Radom Railroad} closes immediately.
+
+\end{document}
