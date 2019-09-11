@@ -7,7 +7,9 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[parfill]{parskip}
-%\usepackage{adforn}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
 
 
 \title{18IrePL\\ \large{Rules differences with 18Ireland}}
@@ -55,7 +57,6 @@ This document covers the rules differences between the two games.
     \hline
       \multicolumn{3}{|l|}{\textbf{Bank size:} 4000} \\
  	\hline
-
   \end{tabular}
 \end{center}
 
@@ -168,5 +169,27 @@ I made the game files using Christopher Giroir's \href{https://github.com/kelsin
 Cover image (railroad bridge in Tczew): \url{https://upload.wikimedia.org/wikipedia/commons/8/88/Weichselbr\%C3\%BCcke_Dirschau.JPG}
 
 Stock market image (main station in Gdańsk): \url{https://upload.wikimedia.org/wikipedia/commons/7/79/Estaci\%C3\%B3n_de_FFCC\%2C_Gdansk\%2C_Polonia\%2C_2013-05-20\%2C_DD_01.jpg}
+
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \section{Trains and phases}
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c | c |}
+    \hline
+    \textbf{Phase} & \textbf{Cost} & \textbf{\#} & \textbf{Train limit} & \textbf{Rust} & \textbf{Notes} \\ \hline
+    \cellcolor{yellow}2 & 80 & 7 & 2/- & - & Minor companies can open.  Yellow par values available.\\ \hline
+    \cellcolor{green!50}3 & 180 & 4 & 2/4 & - & \multirow{2}{*}{\makecell{Minor companies can open. Yellow and green par values available.\\ Major companeis can form by merger. May buy private companies.}} \\ \cline{1-5}
+    \cellcolor{green!50}4 & 300 & 3 & 2/3 & 2 &  \\ \hline
+    \cellcolor{brown}5 & 440 & 2 & \multirow{3}{*}{1/2} & - & \multirow{2}{*}{\makecell{Minor companies can open.\\Yellow, green, and brown par values available.\\ Major companeis can form by merger. Private companies close.}} \\ \cline{1-3}\cline{5-5}
+    \cellcolor{brown}6 & 550 & 2 & & 3 &  \\ \cline{1-3}\cline{5-5}
+    \cellcolor{brown}4D & 700* & $\infty$ & & 4 &  \\ \hline
+  \end{tabular}
+\end{center}
+*possible to trade in a train and pay the difference
+  \end{@twocolumnfalse}
+]
+
+
 
 \end{document}
