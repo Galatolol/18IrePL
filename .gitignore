@@ -2,5 +2,6 @@ rules.aux
 rules.log
 rules.out
 rules.synctex.gz
-board18-18IrePL-GAL02/*
+b18/
 notes.txt
+old_rules/
